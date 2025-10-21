@@ -10,7 +10,7 @@ body {
 header {
     background-image: url(/assets/bg\ img.png);
     background-size: cover;
-    height: 20vh;
+    height: 167px;
     padding: 46px 0 70px 46px;
     color: white;
     
@@ -31,7 +31,6 @@ header > h2 {
 }
 
 #food-items {
-    /* margin-left: 20px; */
     margin-top: 67px;
 }
 
