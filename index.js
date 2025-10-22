@@ -18,6 +18,13 @@ document.addEventListener('click', function(e) {
 
 const myOrderItems = []
 
+function toggleOrderDisplay() {
+    const yourOrder = document.getElementById('your-order')
+    myOrderItems.length > 0 ? 
+    yourOrder.style.display = 'block' :
+    yourOrder.style.display = 'none'
+}
+
 function handleAddItem(itemId) {
     const targetItemObj = menuArray.filter(menuItem => menuItem.id === Number(itemId))[0]
     myOrderItems.push(targetItemObj)
@@ -78,6 +85,7 @@ function getMenuHtml() {
 function render() {
     menuList.innerHTML = getMenuHtml();
     addedItemsList.innerHTML = getOrderHtml()
+    toggleOrderDisplay()
 }
 
 render();
