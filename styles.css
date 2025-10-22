@@ -7,14 +7,11 @@ body {
     font-family: "Smythe", system-ui;
 }
 
-header {
-    background-image: url(/assets/bg\ img.png);
-    background-size: cover;
-    height: 167px;
-    padding: 46px 0 70px 46px;
-    color: white;
-    
+button {
+    cursor: pointer;
 }
+
+/* Typography */
 
 h1, h2 {
     font-weight: 400;
@@ -30,12 +27,45 @@ header > h2 {
     font-size: 1.3rem;
 }
 
-#food-items {
+h3 {
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #000000;
+}
+
+/* Utility classes */
+
+.display-flex {
+    display: flex;
+}
+
+.align-center {
+    text-align: center;
+}
+
+
+
+/* Layout */
+
+header {
+    background-image: url(/assets/bg\ img.png);
+    background-size: cover;
+    height: 167px;
+    padding: 46px 0 70px 46px;
+    color: white;
+    
+}
+
+.menu {
     margin-top: 67px;
 }
 
 .item-container {
-    display: flex;
     align-items: start;
     justify-content: space-between;
     margin: 0 46px 45px;
@@ -43,9 +73,30 @@ header > h2 {
     padding-bottom: 2.5rem;
 }
 
-.item-info {
-    display: flex;
+.your-order {
+    padding: 0 46px 50px;
 }
+
+ul {
+    padding: 0;
+    margin-top: 5rem;
+}
+.cart-total, .list-item {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item * {
+    margin: 0 0 5px;
+}
+
+.cart-total {
+    border-top: 2px solid #393333;
+    padding-bottom: 2rem;
+}
+
+
+/* menu-item-styling */
 
 .item-emoji {
     font-size: 65px;
@@ -54,25 +105,41 @@ header > h2 {
 
 .item-name {
     margin: 0 0 5px;
-    font-weight: 400;
-    font-size: 1.75rem;
     color: black;
 }
 
 .item-ingredients {
     margin: 0;
+    font-size: 1rem;
     color: #8B8B8B;
 }
 
 .item-price {
     margin: 8px 0 0;
-    font-size: 1.25rem;
-    color: #000000;
 }
+
+
+/* buttons */
 
 .add-item-btn {
     background: none;
     border: none;
-    cursor: pointer;
 }
 
+.remove-btn {
+    background: none;
+    border: none;
+    color: #BBBBBB;
+    margin-left: .5rem;
+}
+
+.complete-order-btn {
+    background-color: #16DB99;
+    border: none;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    padding: 18px;
+}
