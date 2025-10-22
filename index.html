@@ -7,7 +7,7 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Smythe&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 
@@ -32,9 +32,39 @@
                     <p id="total-price">$0</p>
                 </div>
             </div>
-            <button id="complete-order-btn" class="complete-order-btn">Complete Order</button>
+            <button id="complete-order-btn" class="complete-order-btn green-btn">Complete Order</button>
         </section>
     </main>
+    <div class="payment-modal" id="payment-modal">
+        <h4 class="align-center">Enter card details</h4>
+        <form class="payment-form display-flex" id="payment-form">
+            <input 
+            type="text" 
+            name="full-name" 
+            id="full-name" 
+            placeholder="Enter your name" 
+            required
+            >
+            <input 
+            type="number" 
+            name="card-details" 
+            id="card-details" 
+            placeholder="Enter card number" 
+            maxlength="16"
+            required
+            >
+            <input 
+            type="number" 
+            name="cvv" 
+            id="cvv" 
+            placeholder="Enter your CVV" 
+            minlength="3"
+            maxlength="3"
+            required
+            >
+            <button type="submit" class="green-btn" id="pay-btn">Pay</button>
+        </form>
+    </div>
 
     <script type="module" src="data.js"></script>
     <script type="module" src="index.js" ></script>

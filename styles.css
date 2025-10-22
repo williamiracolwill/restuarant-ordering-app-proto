@@ -33,6 +33,12 @@ h3 {
     margin: 0;
 }
 
+h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 30px 0 0 0;
+}
+
 p {
     font-size: 1.25rem;
     color: #000000;
@@ -96,6 +102,7 @@ ul {
 }
 
 
+
 /* menu-item-styling */
 
 .item-emoji {
@@ -133,7 +140,7 @@ ul {
     margin-left: .5rem;
 }
 
-.complete-order-btn {
+.green-btn {
     background-color: #16DB99;
     border: none;
     border-radius: 3px;
@@ -142,4 +149,46 @@ ul {
     color: white;
     width: 100%;
     padding: 18px;
+}
+
+
+/* Modal */
+
+.payment-form {
+    flex-direction: column;
+}
+
+.payment-modal {
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    margin: auto;
+    height: 430px;
+    width: 400px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 0 200px #000000;
+    font-family: "Karla", sans-serif;;
+}
+
+.payment-form {
+    padding: 47px 25px 30px; 
+}
+
+.payment-form > input {
+    margin-bottom: 10px;
+    padding: 16px;
+    font-size: 1.125rem;
+}
+
+.payment-form > button {
+    margin-top: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
