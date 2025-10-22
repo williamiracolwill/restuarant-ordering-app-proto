@@ -2,6 +2,9 @@ import { menuArray } from "./data.js";
 
 const menuList = document.getElementById('menu');
 const addedItemsList = document.getElementById('added-items-list')
+const paymentForm = document.getElementById('')
+
+
 
 
 document.addEventListener('click', function(e) {
@@ -13,6 +16,8 @@ document.addEventListener('click', function(e) {
         handleAddItem(e.target.dataset.beer)
     } else if (e.target.dataset.removeBtn) {
         handleRemoveItem(e.target.dataset.removeBtn)
+    } else if (e.target.id === 'complete-order-btn') {
+        toggleModalDisplay()
     }
 });
 
@@ -39,6 +44,14 @@ function handleRemoveItem(itemId) {
     }
     updateTotalPrice()
     render()
+}
+
+let isReadyToPay = false
+
+function toggleModalDisplay() {
+    const paymentModal = document.getElementById('payment-modal')
+    isReadyToPay = !isReadyToPay
+    isReadyToPay ? paymentModal.style.display = 'block' : paymentModal.style.display = 'none'
 }
 
 function getOrderHtml() {

@@ -154,10 +154,6 @@ ul {
 
 /* Modal */
 
-.payment-form {
-    flex-direction: column;
-}
-
 .payment-modal {
     position: fixed;
     display: none;
@@ -176,6 +172,7 @@ ul {
 
 .payment-form {
     padding: 47px 25px 30px; 
+    flex-direction: column;
 }
 
 .payment-form > input {
