@@ -2,7 +2,9 @@ import { menuArray } from "./data.js";
 
 const menuList = document.getElementById('menu');
 const addedItemsList = document.getElementById('added-items-list')
-const paymentForm = document.getElementById('')
+const paymentForm = document.getElementById('payment-form')
+
+
 
 
 
@@ -20,6 +22,21 @@ document.addEventListener('click', function(e) {
         toggleModalDisplay()
     }
 });
+
+let isReadyToPay = false // in order to toggle modal display  
+
+paymentForm.addEventListener('submit', e => {
+    e.preventDefault()
+
+    const paymentFormData = new FormData(paymentForm)
+    const fullName = paymentFormData.get('fullName')
+    toggleModalDisplay()
+    document.getElementById('your-order').innerHTML = `
+        <div class="complete-order-message align-center">
+            <h5>Thanks, ${fullName}! Your order is on its way!</h5>
+        </div>
+        `
+})
 
 const myOrderItems = []
 
@@ -46,7 +63,7 @@ function handleRemoveItem(itemId) {
     render()
 }
 
-let isReadyToPay = false
+
 
 function toggleModalDisplay() {
     const paymentModal = document.getElementById('payment-modal')

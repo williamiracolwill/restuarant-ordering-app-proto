@@ -39,6 +39,11 @@ h4 {
     margin: 30px 0 0 0;
 }
 
+h5 {
+    font-size:  1.8rem;
+    font-weight: 400;
+}
+
 p {
     font-size: 1.25rem;
     color: #000000;
@@ -101,6 +106,12 @@ ul {
     padding-bottom: 2rem;
 }
 
+.complete-order-message {
+    background-color: #ECFDF5;
+    padding: .5rem 62px;
+    color: #065F46;
+    border-radius: 3px;
+}
 
 
 /* menu-item-styling */
